@@ -6,7 +6,7 @@ library(DBI)
 #' @param user SQL username to access database
 #' @param password SQL password corresponding to username
 #--------------------------------------------------------------------------------------
-setDBConn <- function(server="ccte-mysql-res.epa.gov",user,password) {
+setDBConn <- function(server,user,password) {
   printCurrentFunction()
   DB.SERVER <<- server
   DB.USER <<- user

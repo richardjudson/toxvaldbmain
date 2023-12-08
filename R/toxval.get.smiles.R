@@ -1,9 +1,9 @@
 #--------------------------------------------------------------------------------------
-#' Set the molecular weight in the toxval table, for use in unit conversions
+#' Get the SMILES and QSAR ready SMILES for all chemicasl in toxval
 #' @param toxval.db The database version to use
 #' @param source The source
 #--------------------------------------------------------------------------------------
-toxval.set.mw <- function(toxval.db, source=NULL){
+toxval.get.smiles <- function(toxval.db){
   printCurrentFunction(toxval.db)
   dsstox.db <- toxval.config()$dsstox.db
   slist = runQuery("select distinct source from toxval",toxval.db)[,1]

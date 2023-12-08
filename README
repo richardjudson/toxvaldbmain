@@ -29,44 +29,9 @@ Sys.setenv(R_PAPERSIZE="letter")
 system("R CMD Rd2pdf . --title=toxvaldbmain toxvaldbmain --output=toxvaldbmain_manual.pdf --force --no-clean --internals")
 
 ---------------------------------------------------------------------------------------------
-Managing git and bitbucket - internal
----------------------------------------------------------------------------------------------
-
-adding to the remote bitbucket ...
-
-git config --global user.name "richardjudson"
-git config --global user.email "judson.richard@epa.gov"
-
-git config --get remote.origin.url
-https://github.com/USEPA/toxvaldbmain.git
-
-
-
-
-
-cd existing-project
-git init
-git add --all
-git commit -m "Initial Commit"
-git remote add origin ssh://git@ccte-bitbucket.epa.gov:7999/toxval/toxvaldb09.git
-git push -u origin HEAD:main
-
-cd existing-project
-git remote set-url origin ssh://git@ccte-bitbucket.epa.gov:7999/toxval/toxvaldb09.git
-git push -u origin --all
-git push origin --tagsr
-
-git push -u origin master
-
-https://ccte-bitbucket.epa.gov/projects/TOXVAL/repos/toxvaldb09/browse
-
----------------------------------------------------------------------------------------------
 Managing git and bitbucket - external
 ---------------------------------------------------------------------------------------------
 
-
-
----------------------------------------------------------------------------------------------
-Compiling the Vignettes
----------------------------------------------------------------------------------------------
+git remote add origin https://github.com/richardjudson/toxvaldbmain.git
+git push -u origin master
 
